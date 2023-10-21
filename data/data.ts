@@ -3,7 +3,7 @@ const data = {
     sitetagline: "Hudson Heights Rentals",
     sitelogo: "/logo.png",
     title: "Leasing Soon",
-    description: "We are currently are under construction",
+    description: "We are currently under construction",
     newsletterheading: "Stay tuned for our live updates!",
     copyrightText: 'Copyright © 2023 | Hudson Heights',
     socialIconsHeading: "Follow Us 📣",
