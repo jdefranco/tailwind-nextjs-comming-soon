@@ -1,7 +1,7 @@
 const data = {
     sitename: "Hudson Heights",
     sitetagline: "Hudson Heights Rentals",
-    sitelogo: "/logo.png",
+    sitelogo: "https://4567.llc/wp-content/uploads/2023/10/hudson-heights-logo-1.png",
     title: "Leasing Soon",
     description: "We are currently under construction",
     newsletterheading: "Stay tuned for our live updates!",

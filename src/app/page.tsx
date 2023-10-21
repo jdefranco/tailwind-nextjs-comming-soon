@@ -42,7 +42,7 @@ export default function Home() {
         </div>
 
         <div className="relative flex flex-col  place-items-center ">
-          <img src="https://4567.llc/wp-content/uploads/2023/10/logo-small-2.png" ></img>
+          <img src="https://4567.llc/wp-content/uploads/2023/10/hudson-heights-logo-1-1.png" ></img>
           <h2 className='text-center font-heading m-10 text-6xl sm:text-7xl lg:text-8xl leading-[5rem] sm:leading-[7rem] lg:leading-[7rem] font-bold '>
             <span className='bg-clip-text text-transparent bg-gradient-to-r from-gray-500 to-gray-500'>{title}</span>
             
