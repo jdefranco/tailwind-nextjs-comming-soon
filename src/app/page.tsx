@@ -22,8 +22,11 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex min-h-screen bg-slate-950 flex-col items-center justify-between p-5 lg:p-12">
-        <div className="z-10 w-full max-w-5xl items-center justify-between text-sm ">
+<main 
+        className="flex min-h-screen bg-slate-950 flex-col items-center justify-between p-5 lg:p-12"
+        style={{ backgroundImage: "url('https://4567.llc/wp-content/uploads/2023/10/ben-56-scaled.jpg')", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}
+      >
+              <div className="z-10 w-full max-w-5xl items-center justify-between text-sm ">
 
           <div className=" bottom-0 left-0 flex h-30 md:h-48 w-full items-end justify-center  lg:static lg:h-auto lg:w-auto lg:bg-none">
             <a
@@ -41,10 +44,10 @@ export default function Home() {
         <div className="relative flex flex-col  place-items-center ">
           <img src="https://4567.llc/wp-content/uploads/2023/10/logo-small.png" ></img>
           <h2 className='text-center font-heading m-10 text-6xl sm:text-7xl lg:text-8xl leading-[5rem] sm:leading-[7rem] lg:leading-[7rem] font-bold '>
-            <span className='bg-clip-text text-transparent bg-gradient-to-r from-yellow-100 to-yellow-500'>{title}</span>
-            <span className=''>⏳</span>
+            <span className='bg-clip-text text-transparent bg-gradient-to-r from-gray-500 to-gray-500'>{title}</span>
+            
           </h2>
-          <p className='text-2xl md:text-3xl px-6 max-w-3xl text-center m-5 text-slate-100 font-thin' dangerouslySetInnerHTML={{
+          <p className='text-2xl md:text-3xl px-6 max-w-3xl text-center m-5 text-black-500 ' dangerouslySetInnerHTML={{
             __html: description
           }}>
           </p>

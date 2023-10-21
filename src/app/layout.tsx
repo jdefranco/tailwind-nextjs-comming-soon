@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "Home - Comming soon Template",
-  description: 'This is a simple coming soon template built with NextJS and TailwindCSS. It is a lightweight and responsive template that can be used for various projects that require a "coming soon" page.',
+  title: "Hudson Heights - Leasing soon ",
+  description: 'Hudson Heights Apartments in Jersey City, NJ',
 }
 
 export default function RootLayout({
