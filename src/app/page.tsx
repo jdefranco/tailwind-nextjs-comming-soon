@@ -44,7 +44,7 @@ export default function Home() {
         <div className="relative flex flex-col  place-items-center ">
           <img src="https://4567.llc/wp-content/uploads/2023/10/hudson-heights-logo-1-1.png" ></img>
           <h2 className='text-center font-heading m-10 text-6xl sm:text-7xl lg:text-8xl leading-[5rem] sm:leading-[7rem] lg:leading-[7rem] font-bold '>
-            <span className='bg-clip-text text-transparent bg-gradient-to-r from-gray-500 to-gray-500'>{title}</span>
+            <span className='text-gray-800'>{title}</span>
             
           </h2>
           <p className='text-2xl md:text-3xl px-6 max-w-3xl text-center m-5 text-black-500 ' dangerouslySetInnerHTML={{
@@ -52,7 +52,7 @@ export default function Home() {
           }}>
           </p>
         </div>
-        <div className='text-center lg:m-7 mt-10 w-80 p-3' >
+        {/*<div className='text-center lg:m-7 mt-10 w-80 p-3' >
           <form className="space-y-6" action="#" method="POST">
             <div>
               <label htmlFor="email" className="block text-slate-100  font-light text-sm leading-6">{newsletterheading}</label>
@@ -62,7 +62,7 @@ export default function Home() {
               </div>
             </div>
           </form>
-        </div>
+        </div>*/}
         <footer className='text-slate-500 text-center'>
           <div className='my-4 text-center' >
             <ul className='flex flex-wrap lg:flex justify-center '>
