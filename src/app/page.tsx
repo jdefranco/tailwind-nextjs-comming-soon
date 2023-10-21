@@ -43,14 +43,16 @@ export default function Home() {
 
         <div className="relative flex flex-col  place-items-center ">
           <img src="https://4567.llc/wp-content/uploads/2023/10/hudson-heights-logo-1-1.png" ></img>
-          <h2 className='text-center font-heading m-10 text-6xl sm:text-7xl lg:text-8xl leading-[5rem] sm:leading-[7rem] lg:leading-[7rem] font-bold '>
-            <span className='text-gray-800'>{title}</span>
-            
-          </h2>
-          <p className='text-2xl md:text-3xl px-6 max-w-3xl text-center m-5 text-black-500 ' dangerouslySetInnerHTML={{
-            __html: description
-          }}>
-          </p>
+          <div className="bg-white bg-opacity-50 p-6 rounded-lg shadow-lg">
+  <h2 className='text-center font-heading m-10 text-6xl sm:text-7xl lg:text-8xl leading-[5rem] sm:leading-[7rem] lg:leading-[7rem] font-bold '>
+    <span className='text-gray-800'>{title}</span>
+  </h2>
+  <p className='text-2xl md:text-3xl px-6 max-w-3xl text-center m-5 text-black-500' dangerouslySetInnerHTML={{
+    __html: description
+  }}>
+  </p>
+</div>
+
         </div>
         {/*<div className='text-center lg:m-7 mt-10 w-80 p-3' >
           <form className="space-y-6" action="#" method="POST">
