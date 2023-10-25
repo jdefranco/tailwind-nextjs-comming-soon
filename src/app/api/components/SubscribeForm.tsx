@@ -1,9 +1,9 @@
-
+// File: components/SubscribeForm.tsx
 import React from 'react';
 
-async function handleSubmit(event) {
+async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault();
-  const email = event.target.email.value;
+  const email = (event.currentTarget as HTMLFormElement).elements.namedItem('email') as HTMLInputElement;
 
   const response = await fetch('/api/subscribe', {
     method: 'POST',

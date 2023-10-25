@@ -6,9 +6,9 @@ import SubscribeForm from '../components/SubscribeForm'; // Updated path
 
 const inter = Inter({ subsets: ['latin'] })
 
-async function handleSubmit(event) {
+async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault();
-  const email = event.target.email.value;
+  const email = (event.currentTarget as HTMLFormElement).elements.namedItem('email') as HTMLInputElement;
 
   const response = await fetch('https://hook.us1.make.com/qmh2vrkh2ux01nfntm1oi6zlel5ir79g', {
     method: 'POST',
