@@ -1,4 +1,4 @@
-// ✅ add the use client directive for UI event handlers
+// add the use client directive for UI event handlers
 "use client";
 
 import React from 'react';
