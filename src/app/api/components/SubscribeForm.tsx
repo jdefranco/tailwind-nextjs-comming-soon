@@ -37,3 +37,6 @@ export default function SubscribeForm({ newsletterheading }: SubscribeFormProps)
     </div>
   );
 }
+
+
+export default SubscribeForm;
