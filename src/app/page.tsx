@@ -2,12 +2,30 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { NextSeo } from 'next-seo';
 import data from '../../data/data';
-
+import SubscribeForm from '../components/SubscribeForm'; // Updated path 
 
 const inter = Inter({ subsets: ['latin'] })
 
+async function handleSubmit(event) {
+  event.preventDefault();
+  const email = event.target.email.value;
+
+  const response = await fetch('https://hook.us1.make.com/qmh2vrkh2ux01nfntm1oi6zlel5ir79g', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email }),
+  });
+
+  if (response.ok) {
+    alert('Thanks for subscribing!');
+  } else {
+    console.error('Failed to subscribe:', await response.json());
+  }
+}
+
+
 export default function Home() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
   const {
     sitename,
     sitetagline,
@@ -18,13 +36,18 @@ export default function Home() {
     socialIcons,
     socialIconsHeading,
     title,
-  } = data
+  } = data;
 
   return (
     <>
-<main 
+      <main
         className="flex min-h-screen bg-slate-950 flex-col items-center justify-between p-5 lg:p-12"
-        style={{ backgroundImage: "url('https://4567.llc/wp-content/uploads/2023/10/ben-56-scaled.jpg')", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}
+        style={{
+          backgroundImage: "url('https://4567.llc/wp-content/uploads/2023/10/ben-56-scaled.jpg')",
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        }}
       >
               <div className="z-10 w-full max-w-5xl items-center justify-between text-sm ">
 
@@ -54,17 +77,9 @@ export default function Home() {
 </div>
 
         </div>
-        {/*<div className='text-center lg:m-7 mt-10 w-80 p-3' >
-          <form className="space-y-6" action="#" method="POST">
-            <div>
-              <label htmlFor="email" className="block text-slate-100  font-light text-sm leading-6">{newsletterheading}</label>
-              <div className="mt-2 flex-col flex lg:flex md:flex-row">
-                <input id="email" name="email" type="email" placeholder='Email address' autoComplete="email" required className="block w-full placeholder:text-gray-500 pl-[10px] focus:outline-none border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mr-0 rounded-none p-2" />
-                <button className='ml-0 bg-slate-950 sm:w-auto border-slate-100	rounded-none mt-2 md:mt-0	p-2 border-2 text-white'>Subscribe</button>
-              </div>
-            </div>
-          </form>
-        </div>*/}
+
+          <SubscribeForm newsletterheading={newsletterheading} />
+
         <footer className='text-slate-500 text-center'>
           <div className='my-4 text-center' >
             <ul className='flex flex-wrap lg:flex justify-center '>

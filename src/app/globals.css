@@ -26,3 +26,38 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 }
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8); /* white background with 80% opacity */
+    border-radius: 10px; /* optional: for rounded corners */
+    padding:20px;
+    margin-top:30px;
+}
+
+.form-container button {
+  background-color: #008CBA;
+}
+
+.form-container p {
+  margin-bottom:20px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px; /* space between input and button */
+}
+
+button {
+    padding: 10px 20px;
+    border: #000;
+    border-radius: 5px;
+    background-color: #008CBA; /* blue */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f5f; /* darker blue on hover */
+}
