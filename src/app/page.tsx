@@ -65,8 +65,7 @@ export default function Home() {
         </div>
 
         <div className="relative flex flex-col  place-items-center ">
-          <img src="https://4567.llc/wp-content/uploads/2023/10/hudson-heights-logo-1-1.png" ></img>
-          <div className="bg-white bg-opacity-50 p-6 rounded-lg shadow-lg">
+<Image src="https://4567.llc/wp-content/uploads/2023/10/hudson-heights-logo-1-1.png" alt="Logo" width={500} height={500} />          <div className="bg-white bg-opacity-50 p-6 rounded-lg shadow-lg">
   <h2 className='text-center font-heading m-10 text-6xl sm:text-7xl lg:text-8xl leading-[5rem] sm:leading-[7rem] lg:leading-[7rem] font-bold '>
     <span className='text-gray-800'>{title}</span>
   </h2>
