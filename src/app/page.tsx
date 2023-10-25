@@ -2,8 +2,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { NextSeo } from 'next-seo';
 import data from '../../data/data';
-import SubscribeForm from '../components/SubscribeForm'; // Updated path 
-
+import SubscribeForm from '../components/SubscribeForm';
 const inter = Inter({ subsets: ['latin'] })
 
 async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
