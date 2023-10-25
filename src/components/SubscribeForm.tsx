@@ -4,9 +4,9 @@
 import React from 'react';
 
 function SubscribeForm() {
-  async function handleSubmit(event) {
-    event.preventDefault();
-    const email = event.target.email.value;
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  event.preventDefault();
+  const email = (event.target as any).email.value;
 
     const response = await fetch('https://hook.us1.make.com/qmh2vrkh2ux01nfntm1oi6zlel5ir79g', {
         method: 'POST',
