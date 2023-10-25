@@ -18,7 +18,11 @@ async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
   }
 }
 
-export default function SubscribeForm({ newsletterheading }) {
+interface SubscribeFormProps {
+  newsletterheading: string;
+}
+
+export default function SubscribeForm({ newsletterheading }: SubscribeFormProps) {
   return (
     <div className='text-center lg:m-7 mt-10 w-80 p-3'>
       <form className="space-y-6" onSubmit={handleSubmit}>
