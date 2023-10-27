@@ -1,28 +1,33 @@
 // File: components/SubscribeForm.tsx
 import React from 'react';
 
-async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-  event.preventDefault();
-  const email = (event.currentTarget as HTMLFormElement).elements.namedItem('email') as HTMLInputElement;
-
-  const response = await fetch('https://hook.us1.make.com/qmh2vrkh2ux01nfntm1oi6zlel5ir79g', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: email.value }),
-  });
-
-  if (response.ok) {
-    alert('Thanks for subscribing!');
-  } else {
-    console.error('Failed to subscribe:', await response.json());
-  }
-}
-
 interface SubscribeFormProps {
   newsletterheading: string;
 }
 
 export default function SubscribeForm({ newsletterheading }: SubscribeFormProps) {
+  
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const email = (e.currentTarget as HTMLFormElement).elements.namedItem('email') as HTMLInputElement;
+
+    const data = { email: email.value };
+    const JSONdata = JSON.stringify(data);
+    const endpoint = 'https://hook.us1.make.com/qmh2vrkh2ux01nfntm1oi6zlel5ir79g';
+
+    const options = {
+      method: 'POST',
+      body: JSONdata,
+    };
+
+    const response = await fetch(endpoint, options);
+    if (response.ok) {
+      alert('Thanks for subscribing!');
+    } else {
+      console.error('Failed to subscribe:', await response.json());
+    }
+  }
+
   return (
     <div className='text-center lg:m-7 mt-10 w-80 p-3'>
       <form className="space-y-6" onSubmit={handleSubmit}>
