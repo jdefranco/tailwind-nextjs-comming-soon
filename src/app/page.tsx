@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import { NextSeo } from 'next-seo';
 import data from '../../data/data';
+import ClientSideForm from '../components/ClientSideForm';
 
 const ClientSideForm = dynamic(() => import('../components/ClientSideForm'), { ssr: false });
 const inter = Inter({ subsets: ['latin'] });
