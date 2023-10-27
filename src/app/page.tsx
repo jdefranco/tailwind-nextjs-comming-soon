@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { NextSeo } from 'next-seo';
 import data from '../../data/data';
-import SubscribeForm from '../components/SubscribeForm';
+import SubscribeForm from '../components/SubscribeForm'; 
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -77,7 +77,7 @@ export default function Home() {
 
         </div>
 
-<SubscribeForm newsletterheading={newsletterheading as string} />
+<SubscribeForm newsletterheading={newsletterheading} />
 
         <footer className='text-slate-500 text-center'>
           <div className='my-4 text-center' >

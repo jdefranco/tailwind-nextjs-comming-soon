@@ -1,4 +1,3 @@
-// File: components/SubscribeForm.tsx
 import React from 'react';
 
 interface SubscribeFormProps {
@@ -6,21 +5,16 @@ interface SubscribeFormProps {
 }
 
 const SubscribeForm: React.FC<SubscribeFormProps> = ({ newsletterheading }) => {
-  
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const email = (e.currentTarget as HTMLFormElement).elements.namedItem('email') as HTMLInputElement;
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const email = (event.currentTarget as HTMLFormElement).elements.namedItem('email') as HTMLInputElement;
 
-    const data = { email: email.value };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = 'https://hook.us1.make.com/qmh2vrkh2ux01nfntm1oi6zlel5ir79g';
-
-    const options = {
+    const response = await fetch('https://hook.us1.make.com/qmh2vrkh2ux01nfntm1oi6zlel5ir79g', {
       method: 'POST',
-      body: JSONdata,
-    };
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email.value }),
+    });
 
-    const response = await fetch(endpoint, options);
     if (response.ok) {
       alert('Thanks for subscribing!');
     } else {
