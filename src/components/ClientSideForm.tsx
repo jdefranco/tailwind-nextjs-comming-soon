@@ -7,7 +7,7 @@ interface ClientSideFormProps {
 }
 
 const ClientSideForm: React.FC<ClientSideFormProps> = ({ newsletterheading }) => {
-  const { register, handleSubmit } = useForm();
+const { register, handleSubmit } = useForm<FormData>();
 
   interface FormData {
   email: string;
