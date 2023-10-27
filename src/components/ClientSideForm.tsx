@@ -6,15 +6,15 @@ interface ClientSideFormProps {
   newsletterheading: string;
 }
 
-const ClientSideForm: React.FC<ClientSideFormProps> = ({ newsletterheading }) => {
-const { register, handleSubmit } = useForm<FormData>();
-
-  interface FormData {
+interface FormData {
   email: string;
 }
 
-const onSubmit = async (data: FormData) => {
-    const response = await fetch('https://hook.us1.make.com/qmh2vrkh2ux01nfntm1oi6zlel5ir79g', {
+const ClientSideForm: React.FC<ClientSideFormProps> = ({ newsletterheading }) => {
+  const { register, handleSubmit } = useForm<FormData>();
+
+  const onSubmit = async (data: FormData) => {
+    const response = await fetch('/api/subscribe', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
