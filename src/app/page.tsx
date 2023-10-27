@@ -60,7 +60,7 @@ export default function Home() {
 
         </div>
 
-<SubscribeForm newsletterheading={newsletterheading} />
+<ClientSideForm newsletterheading={newsletterheading} />
 
         <footer className='text-slate-500 text-center'>
           <div className='my-4 text-center' >
