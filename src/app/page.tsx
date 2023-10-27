@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { NextSeo } from 'next-seo';
 import data from '../../data/data';
 import SubscribeForm from '../components/SubscribeForm';
+
 const inter = Inter({ subsets: ['latin'] })
 
 async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -77,6 +78,7 @@ export default function Home() {
         </div>
 
           <SubscribeForm newsletterheading={newsletterheading} />
+
 
         <footer className='text-slate-500 text-center'>
           <div className='my-4 text-center' >
