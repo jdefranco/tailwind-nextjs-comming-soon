@@ -5,7 +5,7 @@ interface SubscribeFormProps {
   newsletterheading: string;
 }
 
-export default function SubscribeForm({ newsletterheading }: SubscribeFormProps) {
+const SubscribeForm: React.FC<SubscribeFormProps> = ({ newsletterheading }) => {
   
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -42,3 +42,5 @@ export default function SubscribeForm({ newsletterheading }: SubscribeFormProps)
     </div>
   );
 }
+
+export default SubscribeForm;
