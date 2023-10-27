@@ -5,10 +5,10 @@ async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault();
   const email = (event.currentTarget as HTMLFormElement).elements.namedItem('email') as HTMLInputElement;
 
-  const response = await fetch('/api/subscribe', {
+  const response = await fetch('https://hook.us1.make.com/qmh2vrkh2ux01nfntm1oi6zlel5ir79g', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email }),
+    body: JSON.stringify({ email: email.value }),
   });
 
   if (response.ok) {
@@ -37,6 +37,3 @@ export default function SubscribeForm({ newsletterheading }: SubscribeFormProps)
     </div>
   );
 }
-
-
-export default SubscribeForm;
