@@ -1,12 +1,18 @@
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import { NextSeo } from 'next-seo';
 import data from '../../data/data';
-import ClientSideForm from '../components/ClientSideForm';
 
-const ClientSideForm = dynamic(() => import('../components/ClientSideForm'), { ssr: false });
+import dynamic from 'next/dynamic';
+
+const ClientSideForm = dynamic(
+  () => import('../components/ClientSideForm'),
+  { ssr: false }
+);
+
 const inter = Inter({ subsets: ['latin'] });
+
+
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
