@@ -1,28 +1,11 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import { Inter } from 'next/font/google';
 import { NextSeo } from 'next-seo';
 import data from '../../data/data';
-import SubscribeForm from '../components/SubscribeForm'; 
 
-const inter = Inter({ subsets: ['latin'] })
-
-async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-  event.preventDefault();
-  const email = (event.currentTarget as HTMLFormElement).elements.namedItem('email') as HTMLInputElement;
-
-  const response = await fetch('https://hook.us1.make.com/qmh2vrkh2ux01nfntm1oi6zlel5ir79g', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email }),
-  });
-
-  if (response.ok) {
-    alert('Thanks for subscribing!');
-  } else {
-    console.error('Failed to subscribe:', await response.json());
-  }
-}
-
+const ClientSideForm = dynamic(() => import('../components/ClientSideForm'), { ssr: false });
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
