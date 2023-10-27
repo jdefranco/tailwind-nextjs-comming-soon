@@ -2,7 +2,11 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-const ClientSideForm = ({ newsletterheading }) => {
+interface ClientSideFormProps {
+  newsletterheading: string;
+}
+
+const ClientSideForm: React.FC<ClientSideFormProps> = ({ newsletterheading }) => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = async (data) => {
